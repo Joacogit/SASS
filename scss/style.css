@@ -3,13 +3,11 @@
   border: 1px transparent black;
   border-radius: 3px;
   text-transform: uppercase;
-  -webkit-transition: .4s;
-  transition: .4s;
 }
 
 /*      BOTONES del menu */
 .nav-item:hover {
-  background-color: #bead8b;
+  background-color: #b1a591;
 }
 
 /*      BOTON = vuelve al index    */
@@ -24,7 +22,7 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: darkgray;
+  color: darkgrey;
 }
 
 h2 {
@@ -34,16 +32,31 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: darkgray;
+  color: darkgrey;
 }
 
 header {
   background-image: url(../images/fondomadera.jpg);
 }
 
+/* _______ Media _______ */
+@media (max-width: 991px) {
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    display: none;
+  }
+  .animacionLogo:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
 footer {
   background-color: beige;
-  /*                 ICONOS                    */
+  /* ______________ ICONOS __________________ */
+  /* _______ Media Query_______ */
 }
 
 footer .social {
@@ -53,8 +66,7 @@ footer .social {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 30px 30px 50px 30px;
-  margin-right: 140px;
+  padding: 30px 30px 30px 30px;
   list-style: none;
 }
 
@@ -72,6 +84,14 @@ footer .socialIcons:hover {
   opacity: 2;
 }
 
+@media (max-width: 991px) {
+  footer .social {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 body {
   font-family: 'Nunito';
 }
@@ -82,17 +102,15 @@ body {
 }
 
 header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  
+  grid-area: auto;
   padding-top: 20px;
   /*________  LOGO _______*/
 }
 
 header h1 {
   font-size: 40px;
- 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -101,7 +119,8 @@ header h1 {
 }
 
 header h2 {
- 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -113,7 +132,6 @@ header h2 {
 header .animacionLogo {
   width: 80px;
   height: 80px;
-  padding-top: 30px;
   padding-left: 15px;
   -webkit-transition: all 3s;
   transition: all 3s;
@@ -144,7 +162,8 @@ main .imagen-marron {
 }
 
 main .parrafo-principal {
-  
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -161,16 +180,14 @@ main .parrafo-principal {
   -ms-grid-columns: repeat 3, 1fr;
       grid-template-columns: repeat 3, 1fr;
   /* ancho de cada area */
-      grid-template-areas: "header header header"
- "main main main"
- "footer footer footer";
+      grid-template-areas: "header header header" "main main main" "footer footer footer";
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
 /*____ 3º - PRODUCTOS ______________ */
-.card {
+.card-body {
   height: 100%;
 }
 
@@ -180,7 +197,7 @@ main .parrafo-principal {
 }
 
 .fotos {
- 
+  display: -ms-grid;
   display: grid;
   /*activa grid*/
   grid-area: auto;
@@ -190,7 +207,8 @@ main .parrafo-principal {
   -ms-grid-rows: (1fr)[3];
       grid-template-rows: repeat(3, 1fr);
   /*cantidad*/
- 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -198,7 +216,8 @@ main .parrafo-principal {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   background-size: cover;
   background-position: center;
@@ -236,6 +255,9 @@ main .parrafo-principal {
   .containerFotos {
     display: block;
   }
+  h1 {
+    font-size: 20px;
+  }
   h2 {
     display: none;
   }
@@ -243,8 +265,8 @@ main .parrafo-principal {
     display: none;
   }
   .animacionLogo {
-    padding-top: 0px;
-    border-radius: 50%;
+    width: 50%;
+    height: 50%;
   }
   .animacionLogo:hover {
     -webkit-transform: none;

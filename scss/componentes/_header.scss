@@ -4,3 +4,17 @@ header{
     
 }
 
+/* _______ Media _______ */
+@media (max-width: 991px) {
+    h1 {
+        font-size: 20px;
+      }
+    h2 {
+        display: none;
+      }
+
+    .animacionLogo:hover {
+        transform: none;
+      }
+
+}

@@ -5,8 +5,7 @@ footer {
         .social{
             display: flex;
             justify-content: flex-end;
-            padding: 30px 30px 50px 30px;
-            margin-right: 140px;
+            padding: 30px 30px 30px 30px;
             list-style: none;
         }
         .social li {
@@ -17,4 +16,16 @@ footer {
             transition: transform 0.3s ease-in-out;
             opacity: 2;
         }
+
+
+
+        /* _______ Media Query_______ */
+@media (max-width: 991px) {
+
+    .social {
+        justify-content: center;
+      }
+
+}
+
 }

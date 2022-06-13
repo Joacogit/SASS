@@ -31,15 +31,27 @@ header {
   background-image: url(../images/fondomadera.jpg);
 }
 
+/* _______ Media _______ */
+@media (max-width: 991px) {
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    display: none;
+  }
+  .animacionLogo:hover {
+    transform: none;
+  }
+}
 footer {
   background-color: beige;
   /* ______________ ICONOS __________________ */
+  /* _______ Media Query_______ */
 }
 footer .social {
   display: flex;
   justify-content: flex-end;
-  padding: 30px 30px 50px 30px;
-  margin-right: 140px;
+  padding: 30px 30px 30px 30px;
   list-style: none;
 }
 footer .social li {
@@ -49,6 +61,11 @@ footer .socialIcons:hover {
   transform: scale(1.2);
   transition: transform 0.3s ease-in-out;
   opacity: 2;
+}
+@media (max-width: 991px) {
+  footer .social {
+    justify-content: center;
+  }
 }
 
 body {
@@ -61,7 +78,7 @@ body {
 }
 
 header {
-  grid-area: header;
+  grid-area: auto;
   padding-top: 20px;
   /*________  LOGO _______*/
 }
@@ -80,7 +97,6 @@ header h2 {
 header .animacionLogo {
   width: 80px;
   height: 80px;
-  padding-top: 30px;
   padding-left: 15px;
   transition: all 3s;
 }
@@ -120,9 +136,17 @@ main .parrafo-principal {
 }
 
 /*____ 3º - PRODUCTOS ______________ */
-.card {
-  height: 100%;
+.card-body {
+  height: fit-content;
+
 }
+
+div .card{
+  height:100%;
+
+}
+
+
 
 /*___ 4º - GALERIA _________________ */
 .main-galeria1 {
@@ -170,6 +194,9 @@ main .parrafo-principal {
   .containerFotos {
     display: block;
   }
+  h1 {
+    font-size: 20px;
+  }
   h2 {
     display: none;
   }
@@ -177,11 +204,11 @@ main .parrafo-principal {
     display: none;
   }
   .animacionLogo {
-    background-image: none;
+    width: 50%;
+    height: 50%;
   }
   .animacionLogo:hover {
     transform: none;
-    transition: none;
   }
   .social {
     justify-content: center;
